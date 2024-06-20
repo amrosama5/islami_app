@@ -136,7 +136,7 @@ class QuranScreen extends StatelessWidget {
         Text(
           "Sura Name",
           style:
-              GoogleFonts.elMessiri(fontSize: 20, fontWeight: FontWeight.bold),
+          Theme.of(context).textTheme.bodyMedium,
         ),
         Divider(
           thickness: 3,
@@ -156,8 +156,7 @@ class QuranScreen extends StatelessWidget {
             },
             child: Text(
               suraName[i],
-              style: GoogleFonts.elMessiri(
-                  fontWeight: FontWeight.w400, fontSize: 20),
+              style: Theme.of(context).textTheme.bodySmall,
               textAlign: TextAlign.center,
             ),
           ),
