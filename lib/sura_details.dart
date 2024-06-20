@@ -21,18 +21,15 @@ class _SuraDetailsState extends State<SuraDetails> {
     }
     return SafeArea(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/background.png"),
             fit: BoxFit.fill
           )
         ),
         child: Scaffold(
-          backgroundColor: Colors.transparent,
           appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            title: Text(details[0],style: GoogleFonts.elMessiri(fontWeight: FontWeight.bold,fontSize: 25),),
-            centerTitle: true,
+            title: Text(details[0],style:Theme.of(context).textTheme.bodyLarge,),
           ),
           body: Card(
             margin: const EdgeInsets.all(22),

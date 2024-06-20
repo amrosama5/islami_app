@@ -23,17 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           const Image(width: double.infinity,image: AssetImage("assets/images/background.png"),fit: BoxFit.fill,),
           Scaffold(
-            backgroundColor: Colors.transparent,
             appBar: AppBar(
-              elevation: 0,
-              backgroundColor: Colors.transparent,
-              title: Text("إسلامي",style: GoogleFonts.elMessiri(fontWeight: FontWeight.w700,fontSize: 30),),
-              centerTitle: true,
+              title: Text("إسلامي",style: Theme.of(context).textTheme.displayLarge),
             ),
             bottomNavigationBar: BottomNavigationBar(
-              type: BottomNavigationBarType.fixed,
-              selectedItemColor: Colors.white,
-              unselectedItemColor: Colors.black45,
               currentIndex: index,
               onTap: (value){
                 index = value;
@@ -41,10 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       
                 });
               },
-              backgroundColor: Color(0xffB7935F),
               iconSize: 30,
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
               items: const [
                 BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_quran.png"),),label: ""),
                 BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_sebha.png"),),label: ""),
