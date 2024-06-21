@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/sura_details.dart';
 
+import '../../MyThemeData.dart';
+
 class QuranScreen extends StatelessWidget {
   const QuranScreen({super.key});
 
@@ -131,7 +133,7 @@ class QuranScreen extends StatelessWidget {
         ),
         Divider(
           thickness: 3,
-          color: Color(0xffB7935F),
+          color:MyThemeData.primaryColor,
         ),
         Text(
           "Sura Name",
@@ -140,7 +142,7 @@ class QuranScreen extends StatelessWidget {
         ),
         Divider(
           thickness: 3,
-          color: Color(0xffB7935F),
+          color: MyThemeData.primaryColor,
         ),
         Expanded(
             child: ListView.separated(
@@ -148,7 +150,7 @@ class QuranScreen extends StatelessWidget {
             thickness: 1,
             endIndent: 50,
             indent: 50,
-            color: Color(0xffB7935F),
+            color: MyThemeData.primaryColor,
           ),
           itemBuilder: (context, i) => InkWell(
             onTap: (){

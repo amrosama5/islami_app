@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class  MyThemeData{
-
+   static const Color primaryColor=Color(0xffB7935F);
    static ThemeData lightTheme = ThemeData(
      textTheme: TextTheme(
        bodyLarge: GoogleFonts.elMessiri(
@@ -30,7 +30,7 @@ class  MyThemeData{
        showSelectedLabels: false,
        showUnselectedLabels: false,
        type: BottomNavigationBarType.fixed,
-       backgroundColor: Color(0xffB7935F),
+       backgroundColor: primaryColor,
      ),
      appBarTheme: AppBarTheme(
        backgroundColor: Colors.transparent,

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/MyThemeData.dart';
 import 'package:islami_app/sura_details.dart';
 
+import 'hadeth_details.dart';
 import 'home/home.dart';
 
 void main() {
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
        HomeScreen.routeName: (context) =>  HomeScreen(),
-       SuraDetails.routeName : (context ) =>  SuraDetails()
+       SuraDetails.routeName : (context ) =>  SuraDetails(),
+        HadethDetails.routeName : (context ) =>  HadethDetails(),
       },
     );
   }

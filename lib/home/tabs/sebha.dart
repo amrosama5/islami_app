@@ -75,7 +75,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
           Container(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
             decoration: BoxDecoration(
-              color: const Color(0xffB7935F),
+              color: MyThemeData.primaryColor,
               borderRadius: BorderRadius.circular(30),
             ),
             child: Text(
