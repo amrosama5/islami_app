@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islami_app/sura_details.dart';
+import 'package:islami_app/sura_details/sura_details.dart';
+import 'package:provider/provider.dart';
 
 import '../../MyThemeData.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../../providers/my_provider.dart';
 class QuranScreen extends StatelessWidget {
   const QuranScreen({super.key});
 
@@ -125,6 +128,7 @@ class QuranScreen extends StatelessWidget {
       "الفلق",
       "الناس"
     ];
+    var provider = Provider.of<MyProvider>(context);
     return Column(
       children: [
         Container(
@@ -133,7 +137,7 @@ class QuranScreen extends StatelessWidget {
         ),
         Divider(
           thickness: 3,
-          color:MyThemeData.primaryColor,
+          color:provider.theme == ThemeMode.dark ? MyThemeData.primaryDarkColor : MyThemeData.primaryColor,
         ),
         Text(
           AppLocalizations.of(context)!.sura_name,
@@ -142,15 +146,15 @@ class QuranScreen extends StatelessWidget {
         ),
         Divider(
           thickness: 3,
-          color: MyThemeData.primaryColor,
+          color: provider.theme == ThemeMode.dark ? MyThemeData.primaryDarkColor : MyThemeData.primaryColor,
         ),
         Expanded(
             child: ListView.separated(
-          separatorBuilder: (context, i) => const Divider(
+            separatorBuilder: (context, i) =>  Divider(
             thickness: 1,
             endIndent: 50,
             indent: 50,
-            color: MyThemeData.primaryColor,
+            color: provider.theme == ThemeMode.dark ? MyThemeData.primaryDarkColor : MyThemeData.primaryColor,
           ),
           itemBuilder: (context, i) => InkWell(
             onTap: (){

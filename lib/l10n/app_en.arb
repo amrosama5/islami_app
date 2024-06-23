@@ -2,5 +2,12 @@
   "app_name": "Islami",
   "sura_name": "Sura Name",
   "ahadeth": "Ahadeth",
-  "count_tsabe7": "Tsabe7 count"
+  "count_tsabe7": "Tsabe7 count",
+  "language": "Language",
+  "theme": "Theme",
+  "arabic": "Arabic",
+  "english": "English",
+  "light": "Light",
+  "dark": "Dark",
+  "radio": "Holy Quran Radio"
 }
