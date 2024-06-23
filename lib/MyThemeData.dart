@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 class  MyThemeData{
    static const Color primaryColor=Color(0xffB7935F);
+   static const Color primaryDarkColor=Color(0xffFACC1D);
    static ThemeData lightTheme = ThemeData(
      textTheme: TextTheme(
        bodyLarge: GoogleFonts.elMessiri(
          fontWeight: FontWeight.bold,
-         fontSize: 25
+         fontSize: 25,
        ),
        bodyMedium: GoogleFonts.elMessiri(
            fontWeight: FontWeight.w600,
@@ -15,6 +16,16 @@ class  MyThemeData{
        bodySmall:  GoogleFonts.elMessiri(
            fontWeight: FontWeight.w400,
            fontSize: 20
+       ),
+       displayMedium: GoogleFonts.elMessiri(
+           fontWeight: FontWeight.bold,
+           fontSize: 25,
+           color: primaryColor
+       ),
+       displaySmall: GoogleFonts.elMessiri(
+           fontWeight: FontWeight.bold,
+           fontSize: 25,
+           color: Colors.black
        ),
        displayLarge: GoogleFonts.elMessiri(
            fontWeight: FontWeight.bold,
@@ -35,6 +46,9 @@ class  MyThemeData{
        centerTitle: true,
        titleTextStyle: GoogleFonts.elMessiri(fontWeight: FontWeight.bold,fontSize: 30),
        elevation: 0,
+         iconTheme: IconThemeData(
+             color: Colors.black
+         )
      ),
      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
      useMaterial3: true,
@@ -44,6 +58,16 @@ class  MyThemeData{
    static ThemeData darkTheme = ThemeData(
      textTheme: TextTheme(
        bodyLarge: GoogleFonts.elMessiri(
+           fontWeight: FontWeight.bold,
+           fontSize: 25,
+           color: Colors.white
+       ),
+       displayMedium: GoogleFonts.elMessiri(
+           fontWeight: FontWeight.bold,
+           fontSize: 25,
+           color: primaryDarkColor
+       ),
+       displaySmall: GoogleFonts.elMessiri(
            fontWeight: FontWeight.bold,
            fontSize: 25,
            color: Colors.white
@@ -58,7 +82,6 @@ class  MyThemeData{
            fontSize: 20,
            color: Colors.white
        ),
-
        displayLarge: GoogleFonts.elMessiri(
            fontWeight: FontWeight.bold,
            fontSize: 30,
@@ -79,6 +102,9 @@ class  MyThemeData{
        centerTitle: true,
        titleTextStyle: GoogleFonts.elMessiri(fontWeight: FontWeight.bold,fontSize: 30,color: Colors.white),
        elevation: 0,
+       iconTheme: IconThemeData(
+         color: Colors.white
+       )
      ),
      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
      useMaterial3: true,
