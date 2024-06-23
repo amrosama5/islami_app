@@ -44,7 +44,7 @@ class SuraDetails extends StatelessWidget {
                       itemBuilder: (context,i){
                         return Padding(
                           padding: const EdgeInsets.all(12.0),
-                          child: Text(pro.suraLines[i],style: GoogleFonts.elMessiri(color:provider.theme == ThemeMode.dark ? MyThemeData.primaryDarkColor : Colors.black ,fontSize: 18,fontWeight: FontWeight.w600,letterSpacing: 2),textAlign: TextAlign.center),
+                          child: Text(pro.suraLines[i],style: GoogleFonts.elMessiri(color:provider.theme == ThemeMode.dark ? MyThemeData.primaryDarkColor : Colors.black ,fontSize: 18,fontWeight: FontWeight.w600,letterSpacing: 1),textAlign: TextAlign.center),
                         );
                       },
                       separatorBuilder: (context,i)=>const SizedBox(height: 8,),

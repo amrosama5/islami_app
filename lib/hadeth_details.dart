@@ -32,7 +32,7 @@ class HadethDetails extends StatelessWidget {
                 itemBuilder: (context,i){
                   return Padding(
                     padding: const EdgeInsets.all(12.0),
-                    child: Text( style: GoogleFonts.elMessiri(color:provider.theme == ThemeMode.light ? Colors.black : Color(0xffFACC1D) ,fontSize: 18,fontWeight: FontWeight.w600,letterSpacing: 2),textAlign: TextAlign.center,hadethData.hadethConttent[i]),
+                    child: Text( style: GoogleFonts.elMessiri(color:provider.theme == ThemeMode.light ? Colors.black : Color(0xffFACC1D) ,fontSize: 18,fontWeight: FontWeight.w600,letterSpacing: 1),textAlign: TextAlign.center,hadethData.hadethConttent[i]),
                   );
                 },
                 separatorBuilder: (context,i)=>const SizedBox(height: 8,),
