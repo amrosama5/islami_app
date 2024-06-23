@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/sura_details.dart';
 
 import '../../MyThemeData.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class QuranScreen extends StatelessWidget {
   const QuranScreen({super.key});
 
@@ -136,7 +136,7 @@ class QuranScreen extends StatelessWidget {
           color:MyThemeData.primaryColor,
         ),
         Text(
-          "Sura Name",
+          AppLocalizations.of(context)!.sura_name,
           style:
           Theme.of(context).textTheme.bodyMedium,
         ),

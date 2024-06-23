@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami_app/hadeth_model.dart';
+import 'package:islami_app/models/hadeth_model.dart';
 
 import '../../MyThemeData.dart';
 import '../../hadeth_details.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HadethScreen extends StatefulWidget {
   HadethScreen({super.key});
 
@@ -21,7 +21,8 @@ class _HadethScreenState extends State<HadethScreen> {
       loadFileAhadeth();
     }
     return Column(
-      children: [
+      children:
+      [
         Container(
           alignment: Alignment.center,
           child: Image.asset("assets/images/hadeth_logo.png"),
@@ -31,7 +32,7 @@ class _HadethScreenState extends State<HadethScreen> {
           color: MyThemeData.primaryColor,
         ),
         Text(
-          "Ahadeth",
+          AppLocalizations.of(context)!.ahadeth,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
         const Divider(

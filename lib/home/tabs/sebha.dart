@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/MyThemeData.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class SebhaScreen extends StatefulWidget {
   const SebhaScreen({super.key});
 
@@ -49,7 +49,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
             height: 30,
           ),
           Text(
-            "عدد التسبيحات",
+            AppLocalizations.of(context)!.count_tsabe7,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyMedium,
           ),

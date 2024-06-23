@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 class  MyThemeData{
    static const Color primaryColor=Color(0xffB7935F);
    static ThemeData lightTheme = ThemeData(
@@ -17,7 +16,6 @@ class  MyThemeData{
            fontWeight: FontWeight.w400,
            fontSize: 20
        ),
-
        displayLarge: GoogleFonts.elMessiri(
            fontWeight: FontWeight.bold,
            fontSize: 30
