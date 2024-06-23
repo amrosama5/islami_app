@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islami_app/models/hadeth_model.dart';
 import 'package:provider/provider.dart';
-
 import '../../../MyThemeData.dart';
 import '../../../hadeth_details.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import '../../../providers/my_provider.dart';
 import 'hadteth_tab_provider.dart';
 
-class HadethScreen extends StatefulWidget {
-  HadethScreen({super.key});
+class HadethScreen extends StatelessWidget {
+  const HadethScreen({super.key});
 
-  @override
-  State<HadethScreen> createState() => _HadethScreenState();
-}
 
-class _HadethScreenState extends State<HadethScreen> {
   @override
   Widget build(BuildContext context) {
     // if (hadethData.isEmpty) {

@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/home/tabs/hadeth_tab/haetth.dart';
-import 'package:islami_app/home/tabs/quran.dart';
-import 'package:islami_app/home/tabs/radio.dart';
-import 'package:islami_app/home/tabs/sebha_tab/sebha.dart';
-import 'package:islami_app/home/tabs/settings_tab/settings.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/providers/my_provider.dart';
 import 'package:provider/provider.dart';
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   static const String routeName = "HomeScreen";
-   HomeScreen({super.key});
+   const HomeScreen({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
 
-class _HomeScreenState extends State<HomeScreen> {
-  int index = 0;
   @override
   Widget build(BuildContext context) {
     var pro = Provider.of<MyProvider>(context);
@@ -29,12 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text(AppLocalizations.of(context)!.app_name,style: Theme.of(context).textTheme.displayLarge),
             ),
             bottomNavigationBar: BottomNavigationBar(
-              currentIndex: index,
+              currentIndex: pro.index,
               onTap: (value){
-                index = value;
-                setState(() {
-      
-                });
+               pro.changeTabsIndex(value);
               },
               items: const [
                 BottomNavigationBarItem(icon: ImageIcon(AssetImage("assets/images/icon_quran.png"),),label: ""),
@@ -44,12 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 BottomNavigationBarItem(icon: Icon(Icons.settings),label: ""),
               ],
             ),
-            body: screens[index],
+            body: pro.screens[pro.index],
           ),
         ],
       
       ),
     );
   }
-  List<Widget> screens =  [QuranScreen(),SebhaScreen(),HadethScreen(),RadioScreen(),SettingsScreen()];
 }

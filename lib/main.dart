@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/MyThemeData.dart';
 import 'package:islami_app/providers/my_provider.dart';
 import 'package:islami_app/sura_details/sura_details.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'hadeth_details.dart';
 import 'home/home.dart';

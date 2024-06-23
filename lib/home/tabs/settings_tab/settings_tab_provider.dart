@@ -84,7 +84,6 @@ class SettingsTabProvider extends ChangeNotifier{
     );
   }
 
-
    void showThemeBottomSheet(context){
      showModalBottomSheet(context: context, builder: (context) {
        var pro = Provider.of<MyProvider>(context);

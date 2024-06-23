@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-
 import '../../../models/hadeth_model.dart';
 
 class HadtethTabProvider extends ChangeNotifier{

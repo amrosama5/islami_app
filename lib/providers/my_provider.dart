@@ -1,6 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../home/tabs/hadeth_tab/haetth.dart';
+import '../home/tabs/quran.dart';
+import '../home/tabs/radio.dart';
+import '../home/tabs/sebha_tab/sebha.dart';
+import '../home/tabs/settings_tab/settings.dart';
+
 class MyProvider extends ChangeNotifier{
   String langCode="en";
   ThemeMode theme = ThemeMode.light;
@@ -21,5 +27,14 @@ class MyProvider extends ChangeNotifier{
     }else{
       return "assets/images/dark_bg.png";
     }
+  }
+
+  List<Widget> screens =  [const QuranScreen(),const SebhaScreen(),HadethScreen(),const RadioScreen(),const SettingsScreen()];
+  int index = 0;
+
+
+  changeTabsIndex(int index){
+    this.index = index;
+    notifyListeners();
   }
 }
